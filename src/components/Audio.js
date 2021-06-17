@@ -13,6 +13,7 @@ export  function Audios(song) {
     let music=`${song}`
     console.log(audio,source)
     source.src = music;
+    audio.controls=true;
     audio.load();
     audio.play();
 

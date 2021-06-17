@@ -21,6 +21,7 @@ export default function Index(){
             <div>
                 <Audios/>
             </div>
+            <hr></hr>
             <div className='row'>
                 {questions.map((qn)=> Songsinhome(qn))}
             </div>

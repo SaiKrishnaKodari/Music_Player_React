@@ -1,7 +1,7 @@
 import React, {  } from 'react'
 import Album from './Album'
-import AudioPlayer from './AudioPlayer'
 import Index from './body.js'
+import "./album.css"
 import {Audios} from './Audio'
  export  function Songsinhome(question)
  {
@@ -11,8 +11,9 @@ import {Audios} from './Audio'
         <div>
            
            <div className="col-3 col-lg-3" onClick={e=>Audios(variable)}>
-               <div style={{width:'220px',height:'220px',}}>
-                    <Album/>   
+               <div style={{backgroundColor:'white', width:'220px',height:'250px',boxShadow:'0px 0px 5px 5px gray'}}>
+                    <Album/>  
+                    <div className='title'>{question.fields.name}</div>
                 </div>
             </div> 
             {/* <li className ="list-group-item"> */}
