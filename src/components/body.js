@@ -1,5 +1,6 @@
 import React, { useState,useEffect,useRef } from "react";
 import {Songsinhome  } from "./songsinhome";
+import {Audios} from './Audio'
 
 export default function Index(){
 
@@ -17,9 +18,13 @@ export default function Index(){
 
     return (
         <div>
-            
-            {console.log(questions)}
-            {questions.map((qn)=> Songsinhome(qn))}
+            <div>
+                <Audios/>
+            </div>
+            <div className='row'>
+                {questions.map((qn)=> Songsinhome(qn))}
+            </div>
+        
             
         </div>
     )

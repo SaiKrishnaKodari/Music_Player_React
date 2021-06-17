@@ -1,38 +1,42 @@
 import React, {  } from 'react'
-import ReactAudioPlayer from 'react-audio-player';
+import Album from './Album'
+import AudioPlayer from './AudioPlayer'
+import Index from './body.js'
+import {Audios} from './Audio'
  export  function Songsinhome(question)
  {
 
     let variable=`http://127.0.0.1:8000/${question.fields.audio_file}`
-    console.log(variable)
     return (
         <div>
-
-            <li className ="list-group-item question-title">
-            <div className="row"  >
-                <div className="col-10 col-lg-10">
-                {/* <ReactAudioPlayer
-                    src={question.fields.audio_file}
-                    autoPlay
-                    controls
-                    />
-                <audio controls
-        src={question.fields.audio_file}>
-            Your browser does not support the
-            <code>audio</code> element.
-    </audio> */}
-    <audio id='player'controls>
-    <source src={variable} type="audio/mpeg"/>
-    </audio> 
-                                        
+           
+           <div className="col-3 col-lg-3" onClick={e=>Audios(variable)}>
+               <div style={{width:'220px',height:'220px',}}>
+                    <Album/>   
                 </div>
-                <div
-                 className="col-2 col-lg-2 ">
-                    <h6>{question.fields.name}</h6>
-                    <h6>{question.fields.Singer}</h6>
+            </div> 
+            {/* <li className ="list-group-item"> */}
+            {/* <div className="row">
+            <div className="col-3 col-lg-3 " >
+                <Album/>
+                </div> */}
+                {/* <div className="col-6 col-lg-6" >
+                    
+                    <audio id='player'controls >
+                        <source src={variable} type="audio/mpeg"/>
+                    </audio>                                  
+                </div> */}
+                {/* <div className="col-3 col-lg-3 " >
+                    {question.fields.name}
                 </div>
-            </div>
-            </li>
+                <div className="col-3 col-lg-3 ">
+                   {question.fields.Singer}
+                </div>
+            </div> */}
+            {/* </li> */}
+            <hr></hr>
+            
         </div>
+    
     )
  }
