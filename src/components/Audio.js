@@ -13,7 +13,8 @@ export  function Audios(song) {
     let music=`${song}`
     console.log(audio,source)
     source.src = music;
-    audio.controls=true;
+    
+    console.log(audio.controls)
     audio.load();
     audio.play();
 
@@ -23,7 +24,7 @@ export  function Audios(song) {
                             <div className='row'>
                                 <div className="col-2 col-lg-2" ><h6 id='tag'>NAVBAR</h6> </div>
                                 <div className="col-7 col-lg-7" >
-                                    <audio id='audio' controls  style={{width:'100%'}}>
+                                    <audio id='audio' controls style={{width:'100%'}} preload="none">
                                         <source id="audioSource"src='#' type="audio/mpeg"/>
                                     </audio> 
                                 </div>

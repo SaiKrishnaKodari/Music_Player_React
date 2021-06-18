@@ -15,6 +15,7 @@ export default function Index(){
             return setQuestions(data)
         })
     },[])
+    {console.log(questions)}
 
     return (
         <div>

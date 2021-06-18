@@ -12,7 +12,7 @@ import {Audios} from './Audio'
            
            <div className="col-3 col-lg-3" onClick={e=>Audios(variable)}>
                <div style={{backgroundColor:'white', width:'220px',height:'250px',boxShadow:'0px 0px 5px 5px gray'}}>
-                    <Album/>  
+                    {Album(question.fields.Album)} 
                     <div className='title'>{question.fields.name}</div>
                 </div>
             </div> 
